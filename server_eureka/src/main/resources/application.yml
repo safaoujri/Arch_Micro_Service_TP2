@@ -1,12 +1,12 @@
 server:
-  port: 8761
+  port: 8761  # Port d'exécution de l'application (peut être changé en fonction du besoin)
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false  # Désactive l'enregistrement avec Eureka (car vous utilisez Consul)
+    fetch-registry: false         # Empêche la récupération du registre Eureka
 
 logging:
   level:
-    com.netflix.eureka: OFF
-    com.netflix.discovery: OFF
+    com.netflix.eureka: OFF       # Désactive les logs liés à Eureka
+    com.netflix.discovery: OFF    # Désactive les logs liés à la découverte Eureka

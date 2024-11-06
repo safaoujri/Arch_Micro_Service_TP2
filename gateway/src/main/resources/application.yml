@@ -1,13 +1,12 @@
 server:
-  port: 8888
+  port: 8888  # Port du service Gateway
 
 spring:
   application:
     name: Gateway
   cloud:
-    discovery:
-      enabled: true
-
-eureka:
-  instance:
-    hostname: localhost
+    consul:
+      host: localhost       # Adresse de Consul
+      port: 8500            # Port par défaut de Consul
+      discovery:
+        enabled: true       # Activer la découverte avec Consul
